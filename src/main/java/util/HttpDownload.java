@@ -67,6 +67,16 @@ public class HttpDownload extends Observable implements Callable<URI> {
     private final AtomicLong downloaded = new AtomicLong();
     private Statuses status;
 
+    static {
+        try {
+            if (!Files.exists(Paths.get("Download/"))) {
+                Files.createDirectory(Paths.get("Download/"));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public HttpDownload(URI uri, String hashAlgor, String hash) {
         this.uri = uri;
         this.hashAlgor = hashAlgor;
@@ -95,7 +105,7 @@ public class HttpDownload extends Observable implements Callable<URI> {
 
     // 取得 URI 裡的檔案名稱
     private String getFileName(@NotNull URI uri) {
-        return Paths.get(uri.getPath()).getFileName().toString();
+        return "Download/" + Paths.get(uri.getPath()).getFileName().toString();
     }
 
     // 建立 HttpRequest
