@@ -1,4 +1,4 @@
 # Nephren
-The basic downlotader written in Java
+The basic downloader written in Java
 
-Requestment: Java 15
+Requested: Java 15

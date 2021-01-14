@@ -231,7 +231,7 @@ public class HttpDownload extends Observable implements Callable<URI> {
         String fileHash = "";
         try {
             fileHash = HashUtil.apply(file, hashAlgor);
-            // System.out.println(fileHash);
+            System.out.println(fileHash);
         } catch (DigestException ex) {
             ex.printStackTrace();
         }
