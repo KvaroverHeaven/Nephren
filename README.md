@@ -1,4 +1,5 @@
 # Nephren
-The basic downloader written in Java
+The basic downloader written in Java.
+Final Project for Advanced Object Oriented Programming.
 
-Requested: Java 15
+Requirement: JDK 15
