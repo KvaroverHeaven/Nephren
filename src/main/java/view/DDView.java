@@ -2,7 +2,7 @@
     This file is part of Nephren.
 
     DDView.java
-    Copyright (C) 2020, 2021  Relius Wang
+    Copyright (C) 2020, 2021, 2023  Relius Wang
 
     Nephren is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by

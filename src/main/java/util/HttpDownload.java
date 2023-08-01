@@ -2,7 +2,7 @@
     This file is part of Nephren.
 
     HttpDownload.java
-    Copyright (C) 2020, 2021  Relius Wang
+    Copyright (C) 2020, 2021, 2023  Relius Wang
 
     Nephren is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -55,7 +55,7 @@ public class HttpDownload extends Observable implements Callable<URI> {
     // 建立 HttpClient，預設使用 HTTP2
     private final HttpClient client = HttpClient.newBuilder()
             .version(HttpClient.Version.HTTP_2)
-            .connectTimeout(Duration.ofSeconds(10))
+            .connectTimeout(Duration.ofSeconds(30))
             .priority(1)
             .followRedirects(HttpClient.Redirect.NORMAL)
             .proxy(ProxySelector.getDefault())
